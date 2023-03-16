@@ -1,0 +1,12 @@
+.search-elm{
+    margin-left: 140px;
+    margin-bottom: 20px;
+    
+}
+.searchName{
+    padding: 8px;
+    width: 82%;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(220, 219, 219);
+}

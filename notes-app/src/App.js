@@ -3,9 +3,11 @@ import './App.css';
 import Header from '../src/components/Header/Header';
 import AddNote from '../src/components/AddNote/AddNote';
 import NotesList from '../src/components/NotesList/NotesList';
+import Search from '../src/components/Search/Search';
 
 const App = () => {
   const [notes, setNotes] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     const storedNotes = JSON.parse(localStorage.getItem('notes'));
@@ -26,11 +28,21 @@ const App = () => {
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
   };
 
+  const handleSearch = (text) => {
+    setSearchText(text);
+  };
+
+  // filter notes based on the search text
+  const filteredNotes = notes.filter((note) =>
+    note.content.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <div>
       <Header />
+      <Search searchText={searchText} onSearch={handleSearch} />
       <AddNote onAdd={handleAddNote} />
-      <NotesList notes={notes} onDelete={handleDeleteNote} />
+      <NotesList notes={filteredNotes} onDelete={handleDeleteNote}/>
     </div>
   );
 };
