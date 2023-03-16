@@ -1,0 +1,30 @@
+.notes{
+    /* flex-basis: calc(100% / 3); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(236, 236, 85);
+    border: none;
+    border-radius: 8px;
+    width: 30%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.note-content {
+    margin: 0;
+  }
+  
+  .note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+  .btn {
+    background-color: rgb(236, 236, 85);
+    border: none;
+  }

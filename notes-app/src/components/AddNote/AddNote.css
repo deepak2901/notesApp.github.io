@@ -1,0 +1,32 @@
+form {
+  position: relative; /* This sets the position context for child elements */
+}
+
+textarea {
+  width: 75%;
+  margin-left: 140px;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  border: none;
+  background-color: rgb(95, 248, 217);
+}
+
+button[type="submit"] {
+  position: absolute; /* This positions the button relative to the form element */
+  left: 10px;
+  bottom: 0;
+  margin-bottom: 40px;
+  margin-left: 150px;
+  background-color: rgb(234, 232, 232);
+  border: 1px solid gray;
+  width: 50px;
+  padding: 6px;
+  border-radius: 12px;
+  font-size: smaller;
+  font-weight: 400;
+}
